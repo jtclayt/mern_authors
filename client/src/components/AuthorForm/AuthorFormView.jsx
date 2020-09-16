@@ -5,10 +5,9 @@ import './AuthorForm.css';
 const AuthorFormView = ({handleSubmit, author, errors}) => {
   return (
     <Row className="AuthorForm">
-      <Col md={4}>
+      <Col md={5}>
+        <h2>{(author.name) ? `Update ${author.name}` : 'Add a New Author'}</h2>
         <Form onSubmit={handleSubmit} className="Form">
-          <h2>{(author.name) ? `Update ${author.name}` : 'Add a New Author'}</h2>
-
           {
             errors.map(message => <Alert variant="danger">{message}</Alert>)
           }

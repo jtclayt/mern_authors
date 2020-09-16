@@ -21,7 +21,6 @@ const AuthorForm = ({id}) => {
   const handleSubmit = e => {
     e.preventDefault();
     const postData = {name: e.target['name'].value};
-    console.log(postData);
 
     if (id) {
       Axios.put(AUTHOR_URL, postData)

@@ -20,8 +20,11 @@ module.exports = {
           req.author = author;
           next();
         }
-        res.status(404).json({message: "Author not found"})
+        else {
+          throw new Error("Author not found");
+        }
       })
+      .catch(err => res.status(404).json({message: err}));
   },
 
   oneAuthor: (req, res) => {
@@ -35,7 +38,7 @@ module.exports = {
   },
 
   deleteAuthor: (req, res) => {
-    Author.remove({_id: req.params.id})
+    Author.deleteOne({_id: req.params.id})
       .then(result => res.json(result))
       .catch(err => res.status(500).json(err));
   }

@@ -13,6 +13,7 @@ function App() {
       <Router>
         <Authors default path="/authors" />
         <AuthorForm path="/authors/new" />
+        <AuthorForm path="/authors/:id/edit" />
       </Router>
     </div>
   );

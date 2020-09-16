@@ -5,8 +5,8 @@ const AuthorRoutes = app => {
   app.post('/api/authors', AuthorController.createAuthor);
   app.use('/api/authors/:id', AuthorController.checkId);
   app.get('/api/authors/:id', AuthorController.oneAuthor);
-  app.get('/api/authors/:id', AuthorController.updateAuthor);
-  app.get('/api/authors/:id', AuthorController.deleteAuthor);
+  app.put('/api/authors/:id', AuthorController.updateAuthor);
+  app.delete('/api/authors/:id', AuthorController.deleteAuthor);
 }
 
 module.exports = AuthorRoutes;
