@@ -1,6 +1,7 @@
 import React from 'react';
 
-const AuthorsView = () => {
+const AuthorsView = ({authors}) => {
+  console.log(authors);
   return <h1>Authors view</h1>;
 }
 

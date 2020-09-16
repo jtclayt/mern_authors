@@ -1,12 +1,12 @@
-const AuthorController = require('../controllers/example.controllers');
+const AuthorController = require('../controllers/author.controllers');
 
 const AuthorRoutes = app => {
-  app.get('/authors', AuthorController.allAuthors);
-  app.post('/authors', AuthorController.createAuthor);
-  app.use('/authors/:id', AuthorController.checkId);
-  app.get('/authors/:id', AuthorController.oneAuthor);
-  app.get('/authors/:id', AuthorController.updateAuthor);
-  app.get('/authors/:id', AuthorController.deleteAuthor);
+  app.get('/api/authors', AuthorController.allAuthors);
+  app.post('/api/authors', AuthorController.createAuthor);
+  app.use('/api/authors/:id', AuthorController.checkId);
+  app.get('/api/authors/:id', AuthorController.oneAuthor);
+  app.get('/api/authors/:id', AuthorController.updateAuthor);
+  app.get('/api/authors/:id', AuthorController.deleteAuthor);
 }
 
 module.exports = AuthorRoutes;
