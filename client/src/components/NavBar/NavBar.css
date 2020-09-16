@@ -1,0 +1,11 @@
+.NavBar {
+  padding: 15px 50px;
+}
+
+.NavBar .brand {
+  font-size: 1.8rem;
+}
+
+.NavBar .link {
+  font-size: 1.4rem;
+}

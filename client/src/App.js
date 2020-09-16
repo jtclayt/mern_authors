@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Router } from '@reach/router';
 import './App.css';
+
+import NavBar from './components/NavBar/NavBar';
+import Authors from './components/Authors/Authors';
+import AuthorForm from './components/AuthorForm/AuthorForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Router>
+        <Authors default path="/authors" />
+        <AuthorForm path="/authors/new" />
+      </Router>
     </div>
   );
 }
